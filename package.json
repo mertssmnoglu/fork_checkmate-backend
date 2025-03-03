@@ -5,7 +5,10 @@
 	"main": "index.js",
 	"type": "module",
 	"scripts": {
-		"test": "c8 mocha",
+		"test": "mocha tests/**/*.test.js",
+		"test-unit": "mocha tests/utils",
+		"coverage-unit": "c8 mocha tests/utils",
+		"coverage": "c8 mocha tests/**/*.test.js",
 		"dev": "nodemon index.js",
 		"lint": "eslint .",
 		"lint-fix": "eslint --fix .",
